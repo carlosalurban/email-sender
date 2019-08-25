@@ -6,14 +6,14 @@ if (isset($_POST['enviar'])) {
     $name = $_POST['nombre'];
     $mail = $_POST['correo'];
     $message = $_POST['mensaje'];
-    //NOMBRE
+    // Name
     if (!empty($name)) {
         $name = trim($name);
         $name = filter_var($name, FILTER_SANITIZE_STRING);
     } else {
         $err .= "Por favor, introduzca su nombre<br>";
     }
-    //CORREO
+    // Mail
     if (!empty($mail)) {
         $mail = trim($mail);
         $mail = filter_var($mail, FILTER_SANITIZE_EMAIL);
@@ -23,7 +23,7 @@ if (isset($_POST['enviar'])) {
     } else {
         $err .= "Por favor, introduzca su correo<br>";
     }
-    //MENSAJE
+    // Message
     if (!empty($message)) {
         $message = htmlspecialchars($message);
         $message = trim($message);
